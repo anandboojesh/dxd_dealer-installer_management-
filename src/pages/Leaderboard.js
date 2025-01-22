@@ -526,26 +526,25 @@ const Leaderboard = () => {
   const availableYears = Array.from({ length: 5 }, (_, i) => currentYear - i);
 
   const handleUserClick = async (user) => {
-  if (currentUser && currentUser.role === "Admin") {
-    setSelectedUser(user); // Set the selected user when Admin clicks
-
-    try {
-      const quotationsSnapshot = await getDocs(collection(db, "Quotation_form"));
-      const allTimeQuotations = quotationsSnapshot.docs.filter(
-        (doc) => doc.data().userId === user.userId
-      ).length;
-
-      const rank = leaderboardData.findIndex((item) => item.userId === user.userId) + 1;
-    setSelectedUserRank(rank);
-
-      setSelectedUserAllTimeQuotations(allTimeQuotations);
-    } catch (err) {
-      console.error("Error fetching all-time quotations for the selected user:", err);
+    if (currentUser && currentUser.role === "Admin") {
+      setSelectedUser(user); // Set the selected user when Admin clicks
+  
+      try {
+        const quotationsSnapshot = await getDocs(collection(db, "Quotation_form"));
+        const allTimeQuotations = quotationsSnapshot.docs.filter(
+          (doc) => doc.data().userId === user.userId
+        ).length;
+  
+        const rank = leaderboardData.findIndex((item) => item.userId === user.userId) + 1;
+        setSelectedUserRank(rank);
+  
+        setSelectedUserAllTimeQuotations(allTimeQuotations);
+      } catch (err) {
+        console.error("Error fetching all-time quotations for the selected user:", err);
+      }
     }
-  } else {
-    null
-  }
-};
+  };
+  
 
 
   return (
