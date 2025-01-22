@@ -1,0 +1,350 @@
+/* DealerDashboard.css */
+
+:root {
+  --primary-color: #4a4e69;
+  --secondary-color: #22223b;
+  --accent-color: #9a8c98;
+  --background-light: #f2e9e4;
+  --text-dark: #2d2d2d;
+  --text-light: #ffffff;
+}
+
+.dealer-dashboard-section{
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  box-shadow: 4px 4px 10px #d1d1d1, -4px -4px 10px #ffffff;
+}
+
+.dealer-dashboard-container {
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  box-shadow: 4px 4px 10px #d1d1d1, -4px -4px 10px #ffffff;
+}
+
+.dealer-dashboard-header {
+  text-align: center;
+  padding: 30px;
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  color: var(--text-light);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), 0 -4px 15px rgba(255, 255, 255, 0.1);
+  position: relative;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.view-order-details-btn {
+  background-color: #007bff; /* Primary blue */
+  color: #ffffff; /* White text */
+  padding: 10px 20px; /* Padding for size */
+  font-size: 16px; /* Font size */
+  font-weight: bold; /* Bold text */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+.view-order-details-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+}
+
+.view-order-details-btn:active {
+  background-color: #003f7f; /* Even darker blue on click */
+  transform: scale(0.98); /* Slight scaling effect */
+}
+
+.view-order-details-btn:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Custom focus outline */
+}
+
+
+.dealer-dashboard-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  color: #ffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.dealer-dashboard-header h2 {
+  color: #ffff;
+}
+
+.dealer-dashboard-header:hover {
+  background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
+}
+
+.dealer-dashboard-header h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+.dealer-dashboard-header h1:hover::after {
+  width: 100%;
+}
+
+.dashboard-header1 h1 {
+  color: #333;
+}
+
+.dashboard-section1 {
+  margin-bottom: 20px;
+}
+
+.dealer-dashboard-section h3 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffff;
+  border-bottom: 2px solid #4caf50;
+  display: inline-block;
+}
+
+.ref-h3{
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffff;
+  border-bottom: 2px solid #4caf50;
+  display: inline-block;
+}
+
+.dealer-dashboard-button{
+  background: linear-gradient(135deg, #FF8C42, #D95D39, #8C3F4D);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+};
+
+.dealer-dashboard-button:hover{
+  background: linear-gradient(135deg, #D95D39, #8C3F4D, #5B2C6F);
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.dealer-dashboard-button:active{
+  transform: scale(0.98);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+}
+.container1 {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #fff;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.dealer-pichart-container {
+  flex: 1;
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  height: 30%;
+  margin-left: 20px;
+}
+
+.dealer-pichart-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #2d2d2d;
+}
+.container1 p {
+  margin: 5px 0;
+  text-align: left;
+}
+
+
+.loading {
+  text-align: center;
+  font-size: 18px;
+  color: #888;
+}
+
+.order-item,
+.earning-item,
+.referral-item {
+  border-bottom: 1px solid #eaeaea;
+  padding: 10px 0;
+}
+
+.order-item:last-child,
+.earning-item:last-child,
+.referral-item:last-child {
+  border-bottom: none;
+}
+
+.order-item strong,
+.earning-item strong,
+.referral-item strong {
+  color: #333;
+}
+
+.order-item button{
+  background: linear-gradient(90deg, #0078ff, #0056cc); /* Gradient background */
+  color: #ffffff; /* White text */
+  padding: 8px 16px; /* Reduced padding for smaller size */
+  font-size: 14px; /* Smaller font size */
+  font-weight: 600; /* Semi-bold text */
+  border: none; /* No border */
+  border-radius: 20px; /* Rounded pill-shaped corners */
+  cursor: pointer; /* Pointer cursor */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: all 0.3s ease; /* Smooth transitions */
+}
+
+.order-item button:hover{
+  background: linear-gradient(90deg, #0056cc, #0041a3); /* Darker gradient on hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
+  transform: translateY(-1px); /* Slight lift effect */
+}
+
+.order-item button:active{
+  background: linear-gradient(90deg, #003d80, #002c5b); /* Even darker gradient on click */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Reduced shadow for pressed state */
+  transform: translateY(0); /* Reset lift effect */
+}
+
+.order-item button:focus{
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 0 3px rgba(0, 120, 255, 0.4); /* Custom focus ring */
+}
+
+.order-item button:disabled{
+  background: #d3d3d3; /* Grey background for disabled state */
+  color: #a0a0a0; /* Muted text color */
+  cursor: not-allowed; /* Show disabled cursor */
+  box-shadow: none; /* Remove shadow for disabled */
+}
+
+.chart-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.chart-container h4{
+  color: #2d2d2d;
+}
+
+.chart-container > div {
+  width: 45%;
+  min-width: 300px;
+}
+
+
+/* Pagination Styling */
+.dealer-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.dealer-pagination-button {
+  background: linear-gradient(135deg, #FF8C42, #D95D39);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.dealer-pagination-button:hover {
+  background: linear-gradient(135deg, #D95D39, #8C3F4D);
+  transform: scale(1.1);
+}
+
+
+
+.dealer-pagination-button:disabled {
+  background: linear-gradient(135deg, #ddd, #aaa);
+  color: #666;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Close Button Styling */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-button:hover {
+  color: #333;
+}
+
+.refferal-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 2px solid #33cbc9;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.search-filter{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-referral{
+  background-color:#4a90e2;
+  padding: 10px;
+  border-radius: 15px;
+  color: #fff;
+  font-weight: bold;
+  border-width: 0px;
+
+}
+
+.Manage-orders{
+  background-color: #4a90e2;
+  padding: 10px;
+  border-radius: 15px;
+  color: #fff;
+  font-weight: bold;
+  border-width: 0px;
+}

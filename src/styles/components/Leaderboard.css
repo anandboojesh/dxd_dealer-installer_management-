@@ -1,0 +1,382 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: #ffff;
+    color: white;
+    
+  }
+
+.leaderboard-page {
+    overflow-y: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Center horizontally */
+    justify-content: flex-start; /* Start items at the top */
+    padding: 10px;
+    box-sizing: border-box; /* Ensure consistent padding and border behavior */
+    flex: 1px;
+}
+
+.leaderboard-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+  
+  .leaderboard-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .error {
+    text-align: center;
+    color: #e74c3c;
+    font-size: 1.2rem;
+  }
+  
+  .leaderboard-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .leaderboard-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .leaderboard-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .leaderboard-rank-badge {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  
+  .leaderboard-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    margin-right: 15px;
+  }
+  
+  .leaderboard-details {
+    flex: 1;
+  }
+  
+  .leaderboard-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    color: #333;
+  }
+
+  .filter-button {
+    padding: 10px 15px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+  }
+  
+  .filter-button.active {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .filter-button:hover {
+    background-color: #3e8e41;
+    color: white;
+  }
+  
+  
+  .leaderboard-count {
+    margin: 5px 0 0;
+    color: #555;
+    font-size: 1rem;
+  }
+
+  .user-container{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+  }
+  .user-card{
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+  }
+
+  .user-header{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+  }
+
+  .user-rank{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .user-rank-badge{
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    background: #ff9800;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .user-rank-text{
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+  }
+
+  .user-info {
+    flex: 1;
+  }
+  
+  .user-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .dealer-role {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .user-stats {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+  }
+  
+  .stat-item {
+    flex: 1;
+    background: #f9f9f9;
+    border-radius: 8px;
+    text-align: center;
+    padding: 10px 5px;
+  }
+  
+  .stat-label {
+    font-size: 12px;
+    color: #888;
+  }
+  
+  .stat-value {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 5px;
+  }
+
+  
+
+
+  .dealer-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+  }
+  
+  .dealer-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+  }
+  
+  .dealer-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+  }
+  
+  .dealer-rank {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .dealer-rank-badge {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    background: #ff9800;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .dealer-rank-text {
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+  }
+  
+  .dealer-info {
+    flex: 1;
+  }
+  
+  .dealer-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .dealer-role {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .dealer-stats {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+  }
+  
+  .stat-item {
+    flex: 1;
+    background: #f9f9f9;
+    border-radius: 8px;
+    text-align: center;
+    padding: 10px 5px;
+  }
+  
+  .stat-label {
+    font-size: 12px;
+    color: #888;
+  }
+  
+  .stat-value {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 5px;
+  }
+  
+  /* Export CSV button */
+.export-leaderboard-csv-button {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: none;
+    background: linear-gradient(90deg, #4caf50, #81c784); /* Green gradient */
+    color: #ffffff;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .export-leaderboard-csv-button:hover {
+    background: linear-gradient(90deg, #388e3c, #66bb6a); /* Darker green on hover */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+  }
+  
+  .export-leaderboard-csv-button:focus {
+    outline: 3px solid rgba(76, 175, 80, 0.5); /* Highlighted green outline */
+    outline-offset: 2px;
+  }
+  
+  /* Update Spreadsheet button */
+  .update-spreadheet-button {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: none;
+    background: linear-gradient(90deg, #2196f3, #64b5f6); /* Blue gradient */
+    color: #ffffff;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    margin-left: 10px;
+  }
+  
+  .update-spreadheet-button:hover {
+    background: linear-gradient(90deg, #1976d2, #42a5f5); /* Darker blue on hover */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+  }
+  
+  .update-spreadheet-button:focus {
+    outline: 3px solid rgba(33, 150, 243, 0.5); /* Highlighted blue outline */
+    outline-offset: 2px;
+  }
+  
+
+  
+  @media (max-width: 600px) {
+    .leaderboard-item {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .leaderboard-avatar {
+      margin: 10px 0;
+    }
+  
+    .leaderboard-rank-badge {
+      margin: 0 auto 10px;
+    }
+  }
+  
